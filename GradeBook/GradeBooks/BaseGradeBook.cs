@@ -13,6 +13,7 @@ namespace GradeBook.GradeBooks
     {
         public string Name { get; set; }
         public List<Student> Students { get; set; }
+        public GradeBookType Type;
 
         public BaseGradeBook(string name)
         {
@@ -27,7 +28,7 @@ namespace GradeBook.GradeBooks
             Students.Add(student);
         }
 
-        public void RemoveStudent(string name)
+        public void RemoveStudent(string name) 
         {
             if (string.IsNullOrEmpty(name))
                 throw new ArgumentException("A Name is required to remove a student from a gradebook.");
